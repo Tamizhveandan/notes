@@ -1,0 +1,338 @@
+*{
+    margin :0;
+    padding :0;
+    font-family: sans-serif;
+  
+}
+
+body{
+    width: 100%;
+    height:100vh;
+    background-image: url("../images/background.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+    
+
+}
+
+.future{
+    font-size: 100px;
+    margin: 10px 0 30px;
+    line-height: 100px;
+}
+.content{
+    top: 45%;
+    left: 1%;
+    color: rgb(122, 187, 205);
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 2;
+    animation : container 3s linear;
+}
+.bubbles img{
+    width: 50px;
+    animation: bubbles 7s linear infinite;
+}
+.bubbles{
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+
+    /* visibility: hidden; */
+}
+
+@keyframes container{
+    0%{
+        visibility: visible;
+        transform: translateY(0);
+        opacity:0;    
+    }
+    40%{
+        opacity:1;
+    }
+    70%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes bubbles{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+
+    }
+    70%{
+        opacity: 1;
+
+    }
+    100%{
+        transform:translateY(-80vh) ;
+        opacity: 0;
+
+    }
+}
+
+
+.bubbles img:nth-child(1){
+    animation-delay: -4s;
+    width: 30px;
+
+}
+.bubbles img:nth-child(2){
+    animation-delay: -2s;
+    width: 20px;
+
+
+}
+.bubbles img:nth-child(3){
+    animation-delay: -3.5s;
+    width: 40px;
+
+
+}
+.bubbles img:nth-child(4){
+    animation-delay: -1s;
+    width: 15px;
+
+
+}
+.bubbles img:nth-child(5){
+    animation-delay: -0s;
+    width: 25px;
+
+
+}
+.bubbles img:nth-child(6){
+    animation-delay: -4.5s;
+   
+
+
+}
+.bubbles img:nth-child(7){
+    animation-delay: -2.5s;
+    width: 20px;
+
+
+}
+.bubbles img:nth-child(8){
+    animation-delay: -5.5s;
+    width: 45px;
+
+
+}
+#floatingInput,#floatingPassword{
+    
+    color: rgb(242, 239, 245);
+    background-color:rgba(223, 228, 232, 0.135) ;
+    border-color: rgba(180, 198, 201, 0.248);
+    font-weight: 500;
+    border-radius: 20px;
+    width:100%;
+    
+   
+}
+
+#signing{
+    background-color: rgba(250, 250, 250, 0.104);
+    padding-right: 20px;
+    width: 400px;
+    top:260px;
+    margin-left: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap ;
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 25px rgba(0,0, 0, 0.);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    visibility:hidden;
+    
+    
+}
+.h1{
+    justify-content: center;
+    align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+.login{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    background-color: rgba(240, 248, 255, 0.104);
+    border-radius: 15px;
+    font-weight: 700;
+    border: 2px;
+    width: 60px;
+    height: 30px;
+    margin-left: 80px;
+
+}
+.login:hover{
+    background-color: aliceblue;
+}
+
+@media only screen  and (max-width:800px ){
+
+    .content{
+        
+        flex-direction: column;
+        top :100px;
+        left: 35%;
+        
+        color:aqua;
+        
+    
+     
+    }
+    .future{
+        font-size: 60px;
+    }
+    body {
+        
+        bottom: 0px;
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url("../images/background\ -\ tablet.png");
+        background-size: cover;
+        flex-direction: column;
+       
+    } 
+    #signing{
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-top: 40%;
+        padding: 20px;
+        width: 85%;
+        
+        
+    }
+    #floatingInput,#floatingPassword{
+        width: 100%;
+
+
+
+
+    }
+    .h1{
+        top:1px;
+    }
+}
+
+
+
+
+
+
+@media only screen  and (max-width:600px ){
+
+    .content{
+        
+        flex-direction: column;
+        top :100px;
+        left: 20%;
+        
+        color:aqua;
+        
+    
+     
+    }
+    .future{
+        font-size: 60px;
+    }
+    body {
+        
+        bottom: 0px;
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url("../images/mobile-background.png");
+        background-size: cover;
+        flex-direction: column;
+       
+    } 
+    #signing{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-top: 40%;
+        padding: 20px;
+        width: 85%;
+        
+        
+    }
+    #floatingInput,#floatingPassword{
+        width: 100%;
+
+
+
+
+    }
+    .h1{
+        top:1px;
+    }
+}
+
+@keyframes sign{
+    0%{
+        visibility: visible;
+        transform: translateY(0);
+        opacity:0;    
+    }
+    40%{
+        opacity:1;
+    }
+    70%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}
+#icon{
+    width: 40px;
+    height: 50px;
+    color:rgb(255, 0, 0);
+    text-shadow: 0 0 30px rgb(255, 238, 0);
+}
+#icon :hover{
+    color: rgb(38, 214, 88);
+}
+a{
+    text-decoration: none;
+    color: blueviolet;
+    text-shadow: 0 0 30px rgb(255, 102, 0);
+}
+a:hover{
+    color:aqua
+}
+
+.forgotPassword{
+    text-decoration: none;
+    color: blueviolet;
+    text-shadow: 0 0 30px rgb(255, 102, 0);
+    border: none;
+    background: transparent;
+}
+.forgotPassword:hover{
+    color:aqua
+}
